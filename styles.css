@@ -9,11 +9,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: white; /* Set text color to white */
+    background-color: white; /* Set background color to white */
 }
 
 header {
     background: #333;
-    color: #fff;
     text-align: center;
     padding: 1rem;
 }
