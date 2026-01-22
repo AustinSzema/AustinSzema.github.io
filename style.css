@@ -1,0 +1,126 @@
+/* =========================
+   Base / Reset
+========================= */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#content {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   Layout Grids
+========================= */
+
+.two-cols-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding-left: 25%;
+}
+
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+/* =========================
+   Columns
+========================= */
+
+.bio-col {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 23%;
+  height: 100vh;
+  overflow-y: auto;
+
+  /* hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.bio-col::-webkit-scrollbar {
+  display: none;
+}
+
+.media-col,
+.col {
+  height: 100vh;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.media-col::-webkit-scrollbar,
+.col::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   Typography
+========================= */
+
+.name {
+  font-size: 55px;
+  color: #40c6ff;
+}
+
+.intro {
+  font-size: 35px;
+}
+
+.descrip-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.piece {
+  text-align: center;
+}
+
+.piece-cap {
+  font-weight: bold;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .two-cols-main,
+  .two-cols {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .bio-col {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .media-col,
+  .col {
+    height: auto;
+    overflow-y: visible;
+  }
+}
