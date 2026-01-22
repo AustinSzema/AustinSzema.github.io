@@ -40,7 +40,7 @@ text {
   display: block;
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(49, 54, 61, 0.9);
   backdrop-filter: blur(10px);
   padding: 4rem 3rem;
   border-radius: 16px;
@@ -63,7 +63,7 @@ h1 {
   margin-bottom: 1rem;
   color: #0f172a;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #6368f1 0%, #5cc5f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
