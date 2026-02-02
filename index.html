@@ -67,6 +67,53 @@
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.75);
       }
 
+
+      /* Header image wrapper */
+      .header-image-wrapper {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 100;
+      }
+
+      /* Header image */
+      .header-image {
+        width: 64px;
+        height: 64px;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+
+      .header-image-wrapper:hover .header-image {
+        transform: scale(1.05);
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        background: rgba(30, 41, 59, 0.95);
+        color: #93c5fd;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .header-image-wrapper:hover .tooltip {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+
       /* Typography */
       h1 {
         font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -156,8 +203,23 @@
           padding: 2.5rem 1.5rem;
         }
         
+        
         h1 {
           font-size: 2rem;
+        }
+
+        .header-image-wrapper {
+          top: 1rem;
+          right: 1rem;
+        }
+
+        .header-image {
+          width: 48px;
+          height: 48px;
+        }
+
+        .tooltip {
+          font-size: 0.75rem;
         }
       }
 
@@ -175,6 +237,11 @@
   </head>
 <body>
     <div class="container">
+      <a href="https://austinszema.myportfolio.com/" target="_blank" class="header-image-wrapper">
+        <img src="images/Austin Szema Logo.png" alt="Profile" class="header-image">
+        <span class="tooltip">View Portfolio</span>
+      </a>
+
       <h1><u>Game Design Blog</u></h1>
       <h2>Austin Szema</h2>
 
