@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>What does it mean to be a game designer?</title>
+    <title>Austin Szema - Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -48,7 +48,7 @@
       }
 
       /* Content wrapper */
-      text {
+      .container {
         display: block;
         max-width: 800px;
         margin: 0 auto;
@@ -62,7 +62,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      text:hover {
+      .container:hover {
         transform: translateY(-2px);
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.75);
       }
@@ -72,58 +72,44 @@
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         font-weight: 800;
         line-height: 1.1;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         letter-spacing: -0.02em;
         background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         animation: fadeInUp 0.6s ease;
+        text-align: center;
       }
 
-      h2 {
-        font-size: 1.25rem;
-        font-weight: 500;
+      /* Post links */
+      .post-link {
+        display: block;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 12px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        animation: fadeInUp 0.6s ease backwards;
+      }
+
+      .post-link:hover {
+        background: rgba(30, 41, 59, 0.8);
+        transform: translateX(8px);
+      }
+
+      .post-title {
+        font-size: 1.5rem;
+        font-weight: 700;
         color: #93c5fd;
         margin-bottom: 0.5rem;
-        animation: fadeInUp 0.6s ease 0.1s backwards;
       }
 
-      h3 {
-        font-size: 0.95rem;
-        font-weight: 400;
+      .post-meta {
+        font-size: 0.9rem;
         color: #919baa;
-        margin-bottom: 3rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid #1e293b;
-        animation: fadeInUp 0.6s ease 0.2s backwards;
-      }
-
-      /* Paragraphs */
-      text {
-        font-size: 1.1rem;
-        color: #cbd5f5;
-        animation: fadeInUp 0.6s ease 0.3s backwards;
-      }
-
-      text br + br + * {
-        margin-top: 1.5rem;
-      }
-
-      /* Images */
-      img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 2rem auto;
-        display: block;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      img:hover {
-        transform: scale(1.02);
-        box-shadow: 0 20px 55px rgba(0, 0, 0, 0.8);
       }
 
       /* Animations */
@@ -150,16 +136,12 @@
           padding: 1rem 5%;
         }
         
-        text {
+        .container {
           padding: 2.5rem 1.5rem;
         }
         
         h1 {
           font-size: 2rem;
-        }
-        
-        h2 {
-          font-size: 1.1rem;
         }
       }
 
@@ -169,28 +151,30 @@
       }
 
       /* Focus styles for accessibility */
-      a:focus,
-      button:focus {
+      a:focus {
         outline: 2px solid #60a5fa;
         outline-offset: 2px;
       }
     </style>
   </head>
 <body>
-    <text>
-    <h1>What does it mean to be a game designer?</h1>
-    <h2>Austin Szema</h2>
-    <h3>1/22/26</h3>
-    
-    Some of the best game designers have historically been people who are not formally trained as game designers, rather they are programmers, artists, sound designers, or specialists in a very specific creative discipline that want to apply that discipline towards making a game. With that, what happens when someone's specialization is "game design"? What does it mean for a "game designer" to design a game, compared to an artist making a game? The notion of a "game designer", someone who is specifically trained in the field of game design, is a fairly new concept.  Pong came out in 1972, with the first game design degrees showing up around the early 2000s with Champlain College, USC, NYU, DigiPen, and CMU. Many of these programs also specifically train game design as an aspect of computer science, often falling under the title of "game development", not strictly "game design". Now in 2026, there are hundreds of programs with game design degrees in the US alone. 
-    <br><br>
-    We are entering into a generation in which the next batch of industry leading game designers are people who have been taught specifically to be "game designers". So what does this mean for the industry as a whole? Certainly the barrier to entry has been raised. Recruiters are now specifically targeting students who have majored in game design related programs and who have experience working on games through school projects and game jams. There's also the question of whether or not someone who has a background as a "game designer" will make better games than for example someone with a background as an artist. What often makes games made by people who have not been formally trained in game design is that they bring a unique perspective that designers wouldn't necessarily consider when ideating. Programs such as NYU's Game Center specifically look for people that are artists, sound designers, and other creatives, and train them to apply their unique backgrounds towards making games. So the question arises of "should we even teach game design?" and "what does it mean for someone to be a "game designer?" Is it better for people looking to make great games to train themselves in a related field and then apply those skills to making games? Is it harder for "pure game designers" to make great games? Or is it simply that they need to draw upon other aspects of their lives that they have specialties and experience in? Also what does it mean to have a "game design degree"? When someone has a degree in art, we have a relatively clear idea of what that person does. When someone has a degree in computer science, we have a relatively clear idea of that person's skillset. But tell anyone that you have a "game design degree" and they'll likely think "ok so you just play video games" or "oh so it's like esports"
-    <br><br>
-    While in the past you could get into the games industry with nothing more than a single game jam project and a tic tac toe program written in Java, the expectations have exponentially skyrocketed for applications, and I predict that we will see a large shift in the industry, where the majority of senior developers will have come from top game design schools, rather than having pivoted from other industries or disciplines.
-    <br><br>
-    As someone with a BFA in Game Design from Northeastern University, it is something that I have been pondering over for a while, and in time I'm sure my thoughts will evolve as the industry shifts. One thing I do know for certain though, is that the craft of game design is definitely becoming more respected in the general public.
-    <br><br>
-    </text>
+    <div class="container">
+      <h1>Blog</h1>
+      
+      <a href="post1.html" class="post-link" style="animation-delay: 0.1s">
+        <div class="post-title">What does it mean to be a game designer?</div>
+        <div class="post-meta">Austin Szema • 1/22/26</div>
+      </a>
+
+      <!-- To add more posts, copy this block and update the details:
+      
+      <a href="post2.html" class="post-link" style="animation-delay: 0.2s">
+        <div class="post-title">Your Post Title</div>
+        <div class="post-meta">Austin Szema • Date</div>
+      </a>
+      
+      -->
+      
+    </div>
 </body>
-<div style="height: 50px;"></div>
 </html>
