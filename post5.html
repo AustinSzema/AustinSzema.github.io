@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Game Design Gauntlet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Host Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.7;
+        color: #e5e7eb;
+        background: linear-gradient(135deg, #0b1220 0%, #020617 100%);
+        min-height: 100vh;
+        padding: 2rem 10%;
+        position: relative;
+      }
+
+      /* Animated background accent */
+      body::before {
+        content: '';
+        position: fixed;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+        animation: rotate 30s linear infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Back link */
+      .back-link {
+        display: inline-block;
+        max-width: 800px;
+        margin: 0 auto 1rem auto;
+        color: #93c5fd;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.2s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .back-link:hover {
+        color: #60a5fa;
+      }
+
+      .back-link::before {
+        content: '← ';
+      }
+
+      /* Content wrapper */
+      .text {
+        display: block;
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(42, 60, 100, 0.9);
+        backdrop-filter: blur(12px);
+        padding: 4rem 3rem;
+        border-radius: 16px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .text:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.75);
+      }
+
+      /* Typography */
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+        background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: fadeInUp 0.6s ease;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #93c5fd;
+        margin-bottom: 0.5rem;
+        animation: fadeInUp 0.6s ease 0.1s backwards;
+      }
+
+      h3 {
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #919baa;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #1e293b;
+        animation: fadeInUp 0.6s ease 0.2s backwards;
+      }
+
+      /* Paragraphs */
+      .text {
+        font-size: 1.1rem;
+        color: #cbd5f5;
+        animation: fadeInUp 0.6s ease 0.3s backwards;
+      }
+
+      .text br + br + * {
+        margin-top: 1.5rem;
+      }
+
+      /* Images */
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 2rem auto;
+        display: block;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 20px 55px rgba(0, 0, 0, 0.8);
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Selection styling */
+      ::selection {
+        background: rgba(59, 130, 246, 0.35);
+        color: #020617;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        body {
+          padding: 1rem 5%;
+        }
+        
+        .text {
+          padding: 2.5rem 1.5rem;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+        
+        h2 {
+          font-size: 1.1rem;
+        }
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Focus styles for accessibility */
+      a:focus,
+      button:focus {
+        outline: 2px solid #60a5fa;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+<body>
+    <a href="index.html" class="back-link">Back to all posts</a>
+    
+    <div class="text">
+    <h1>The Game Design Gauntlet</h1>
+    <h2>Austin Szema</h2>
+    <h3>3/26/26</h3>
+    
+    Games education has a deep flaw that leads to people who put the bare minimum of effort into graduating with a degree. Do the structure of how many educational institutions work, it is disadvantageous for them to fail people. Whether that be for tuition money, school image, statistics, or the potential backlash against professors. The problem is that this allows people to do <i>just enough</i> to pass, and to graduate without ever having done any actual work. "Oh I'm the producer (but doesn't actually do any producing)" "Oh I'm a designer (on a team that already has 4 other designers)".
+    <br><br>
+    There needs to be a structure in which people are allowed to fail. Failure is our greatest learning tool, it has been for all of existence. Evolution is the process of filtering out those who failed to adapt. Through failure, we learn, grow, change, and do better than we did before. Knowledge is the spread of the lessons learned from the cummulative failure of others, so as to prevent those mistakes from coming about again.
+    <br><br>
+    Therefore I propose this: A gaunlet in which game designers are put through a series of challenges that forces them to fail and learn. You might think this sounds similar to the CMU ETC BVW (building virtual worlds) class, but the big difference here is that not everyone will make it to the next semester. In fact, more than half of the participants <b> shouldn't.</b>
+    <br><br>
+    This gauntlet would be structured similarly to a typical reality competition series like Hell's Kitchen. Contestants compete in a series of challenges designed to put them under intense pressure and difficult situations. This could be game jams, design challenges, teamwork challenges, etc. One specific idea would be to have a game jam where halfway through, a new design constraint is added in, after the team has already done a lot of design work. This would be to simulate the real world, in which a higher up corporate decision has been made, which requires the team to pivot and adapt. If a team cannot be flexible enough to adapt to a rising challenge, what kind of game designers are we producing?
+    <br><br>
+    In order to run this show, you would need someone with immense experience in the games industry, with knowledge of all the disciplines, and with enough grit to tell people their ideas and their work is <b>BAD</b>. This is one of the biggest flaws with the games education system, is that not enough people are told that their ideas are BAD. The world does not need more 2D platformer metroidvania roguelikes.
+    <br><br>
+  </div>
+</body>
+<div style="height: 50px;"></div>
+</html>
